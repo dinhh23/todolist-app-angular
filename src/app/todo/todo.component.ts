@@ -20,6 +20,10 @@ export class TodoComponent implements OnInit {
         x["$key"] = element.key;
         this.toDoListArray.push(x);
       })
+
+      this.toDoListArray.sort((a,b) => {
+        return a.isChecked - b.isChecked;
+      })
     });
   }
 
